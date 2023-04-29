@@ -1,0 +1,75 @@
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white !important;
+}
+
+.poster {
+  width: 300px;
+  height: 450px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.details {
+  flex-grow: 1;
+  gap: 8px;
+  .header {
+    display: flex;
+    // justify-content: center;
+
+    margin-bottom: 20px;
+    .title {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .backButton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #eee;
+      color: rgb(90, 83, 83);
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #aaa;
+      }
+    }
+  }
+}
+
+.genre,
+.year,
+.rating {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.synopsis {
+  font-size: 18px;
+  margin-top: 20px;
+}

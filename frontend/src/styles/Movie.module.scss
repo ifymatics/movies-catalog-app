@@ -1,0 +1,41 @@
+.movie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+  margin-bottom: 0.8rem;
+  .action {
+    display: flex;
+    gap: 8px;
+    .delete {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #eee;
+      color: rgb(90, 83, 83);
+      font-size: 16px;
+      cursor: pointer;
+      color: red;
+      &:hover {
+        background-color: #aaa;
+      }
+    }
+    .edit {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #eee;
+      color: rgb(90, 83, 83);
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #aaa;
+      }
+    }
+  }
+}

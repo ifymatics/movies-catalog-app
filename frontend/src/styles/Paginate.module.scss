@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  .previous {
+    width: 4rem;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    button {
+      border: none;
+      border-radius: 3px;
+      padding: 2px 7px;
+    }
+  }
+  .next {
+    width: 2.5rem;
+    border: 2px solid lightgray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    button {
+      border: none;
+      border-radius: 3px;
+      padding: 2px 7px;
+    }
+  }
+}
