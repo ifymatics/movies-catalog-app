@@ -3,6 +3,7 @@ import { Controller, Get, Post, Body, Param, Delete, Query } from '@nestjs/commo
 import { Movie } from './movie.entity';
 import { CreateMovieDto } from './dto/create-movie.dto';
 import { MoviesService } from './movies.service';
+import { UpdateMovieDto } from './dto/update-movie.dto';
 
 @Controller('movies')
 export class MoviesController {
@@ -49,6 +50,15 @@ export class MoviesController {
   async create(@Body() movieData: CreateMovieDto): Promise<Movie> {
     try {
       return await this.moviesService.create(movieData as any);
+    } catch (error) {
+      console.log(error.message)
+    }
+
+  }
+  @Post("/update")
+  async update(@Body() movieData: UpdateMovieDto): Promise<Movie> {
+    try {
+      return await this.moviesService.update(movieData as any);
     } catch (error) {
       console.log(error.message)
     }

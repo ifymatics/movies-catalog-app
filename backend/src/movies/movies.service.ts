@@ -30,6 +30,21 @@ export class MoviesService {
 
 
   }
+  async update(movieData: Movie): Promise<any> {
+
+
+    movieData.updatedAt = new Date();
+    //const movie = this.moviesRepository.update(movieData)
+    return this.moviesRepository
+      .createQueryBuilder()
+      .update(movieData)
+      .set({ title: movieData.title, genre: movieData.genre, year: movieData.year, createdAt: movieData.createdAt, updatedAt: movieData.updatedAt })
+      .where("id = :id", { id: movieData.id })
+      .execute()
+
+
+
+  }
   async find({ page, skip, take, sort, order, title, genre, year,
   }: QueryObj): Promise<{ count: number; movies: Movie[] }> {
 
