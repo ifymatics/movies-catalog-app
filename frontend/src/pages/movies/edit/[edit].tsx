@@ -71,7 +71,7 @@ const EditMovie = () => {
     };
 
     try {
-      await axios.post("http://localhost:5000/movies", transFormedData);
+      await axios.post("http://localhost:5000/movies/update", transFormedData);
       router.push("/");
     } catch (error: any) {
       if (error.response) {
